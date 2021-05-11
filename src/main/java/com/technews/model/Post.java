@@ -5,6 +5,8 @@ import com.sun.istack.NotNull;
 import com.sun.tools.javah.Gen;
 
 import javax.persistence.*;
+import java.util.Date;
+import java.util.List;
 import java.util.Objects;
 
 @Entity
@@ -31,7 +33,7 @@ public class Post {
     private Date updatedAt = new Date();
     private List<Comment> comments;
 
-    public Post(Integer id, String title, String postUrl, String userName, int voteCount, Integer userId, Date postedAt, Date updatedAt, List<Comment> comments) {
+    public Post(Integer id, String title, String postUrl, String userName, int voteCount, Integer userId) {
         this.id = id;
         this.title = title;
         this.postUrl = postUrl;

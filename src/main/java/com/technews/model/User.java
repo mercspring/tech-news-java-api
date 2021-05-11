@@ -9,15 +9,11 @@ import java.util.Objects;
 @JsonIgnoreProperties({"hibernateLazyInitializer", "handler"})
 @Table(name = "user")
 public class User {
-    public User(Integer id, String username, String email, String password, boolean loggedIn, List<Post> posts, List<Vote> votes, List<Comment> comments) {
+    public User(Integer id, String username, String email, String password) {
         this.id = id;
         this.username = username;
         this.email = email;
         this.password = password;
-        this.loggedIn = loggedIn;
-        this.posts = posts;
-        this.votes = votes;
-        this.comments = comments;
     }
 
     public Integer getId() {
