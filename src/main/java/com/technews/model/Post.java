@@ -7,6 +7,7 @@ import com.sun.tools.javah.Gen;
 import javax.persistence.*;
 import java.util.Date;
 import java.util.List;
+import javax.persistence.Table;
 import java.util.Objects;
 
 @Entity
@@ -31,13 +32,13 @@ public class Post {
     @Temporal(TemporalType.DATE)
     @Column(name = "updated_at")
     private Date updatedAt = new Date();
+    @OneToMany(mappedBy = "postId", cascade = CascadeType.ALL, fetch = FetchType.LAZY)
     private List<Comment> comments;
 
     public Post(Integer id, String title, String postUrl, String userName, int voteCount, Integer userId) {
         this.id = id;
         this.title = title;
         this.postUrl = postUrl;
-        this.userName = userName;
         this.voteCount = voteCount;
         this.userId = userId;
     }
