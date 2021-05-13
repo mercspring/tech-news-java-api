@@ -3,7 +3,6 @@ package com.technews.model;
 import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
 
 import javax.persistence.*;
-import java.io.Serializable;
 import java.util.Objects;
 
 @Entity
@@ -15,6 +14,10 @@ public class Comment {
         this.commentText = commentText;
         this.userId = userId;
         this.postId = postId;
+    }
+
+    public Comment(){
+
     }
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)

@@ -42,6 +42,9 @@ public class Post {
         this.voteCount = voteCount;
         this.userId = userId;
     }
+    public Post(){
+
+    }
 
     public Integer getId() {
         return id;
