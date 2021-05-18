@@ -11,7 +11,7 @@ import java.util.Objects;
 @Entity
 @JsonIgnoreProperties({"hibernateLazyInitializer", "handler"})
 @Table(name = "user")
-public class User {
+public class User implements Serializable{
     public User(Integer id, String username, String email, String password) {
         this.id = id;
         this.username = username;

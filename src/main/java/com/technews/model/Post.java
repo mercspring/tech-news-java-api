@@ -9,11 +9,12 @@ import java.util.Date;
 import java.util.List;
 import javax.persistence.Table;
 import java.util.Objects;
+import java.io.Serializable;
 
 @Entity
 @JsonIgnoreProperties({"hibernateLazyInitializer", "handler"})
 @Table(name = "post")
-public class Post {
+public class Post implements Serializable{
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
     private Integer id;
