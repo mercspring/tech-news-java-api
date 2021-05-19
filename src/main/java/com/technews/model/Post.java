@@ -2,7 +2,6 @@ package com.technews.model;
 
 import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
 import com.sun.istack.NotNull;
-import com.sun.tools.javah.Gen;
 
 import javax.persistence.*;
 import java.util.Date;
